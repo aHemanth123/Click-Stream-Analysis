@@ -1,0 +1,9 @@
+parquetDF.write
+  .format("jdbc")
+  .option("url","jdbc:mysql://localhost:3306/clickstream_db")
+  .option("driver","com.mysql.cj.jdbc.Driver")
+  .option("dbtable","clickstream_events")
+  .option("user","root")
+  .option("password","******")
+  .mode("append")
+  .save()
